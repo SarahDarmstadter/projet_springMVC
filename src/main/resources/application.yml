@@ -1,0 +1,17 @@
+#changer les données de connexion à la bdd msyql quand j'aurai trouvé le ficher de conf dans xamp
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mediatheque
+    username: root
+    password: password123!
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
